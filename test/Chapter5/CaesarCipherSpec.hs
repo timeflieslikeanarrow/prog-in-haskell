@@ -42,6 +42,8 @@ spec = do
     it "returns 'haskell is fun' when shifting -3 positions and given 'kdvnhoo lv ixq'" $
       encode (-3) "kdvnhoo lv ixq" `shouldBe` "haskell is fun"
 
+    it "encode 'Think like a Fundamentalist Code like a Hacker'" $ 
+      encode 13 "Think like a Fundamentalist Code like a Hacker" `shouldBe` "Guvax yvxr n Shaqnzragnyvfg Pbqr yvxr n Unpxre"
 
   describe "percent" $ do
     it "returns 33.333336 when given 5 15" $
@@ -63,15 +65,17 @@ spec = do
       rotate 3 [1,2,3,4,5] `shouldMatchList` [4,5,1,2,3]
 
   describe "crack" $ do
-    it "returns 'haskell is fun' given 'kdvnhoo lv ixq'" $
+    it "returns 'haskell is fun' when given 'kdvnhoo lv ixq'" $
       crack "kdvnhoo lv ixq" `shouldBe` "haskell is fun"
 
-    it "returns 'list comprehensions are useful' given 'vscd mywzboroxcsyxc kbo ecopev'" $
+    it "returns 'list comprehensions are useful' when given 'vscd mywzboroxcsyxc kbo ecopev'" $
       crack "vscd mywzboroxcsyxc kbo ecopev" `shouldBe` "list comprehensions are useful"
   
   describe "Exercise 10: with uppercase letters" $ do
-    it "returns 'Haskell Is Fun' given 'Kdvnhoo Lv Ixq'" $
+    it "returns 'Haskell Is Fun' when given 'Kdvnhoo Lv Ixq'" $
       crack "Kdvnhoo Lv Ixq" `shouldBe` "Haskell Is Fun"
 
-    it "returns 'List Comprehensions Are Useful' given 'Vscd Mywzboroxcsyxc Kbo Ecopev'" $
+    it "returns 'List Comprehensions Are Useful' when given 'Vscd Mywzboroxcsyxc Kbo Ecopev'" $
       crack "Vscd Mywzboroxcsyxc Kbo Ecopev" `shouldBe` "List Comprehensions Are Useful"
+
+    
