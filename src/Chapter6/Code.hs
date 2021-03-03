@@ -7,7 +7,8 @@ fac n = product [1..n]
 
 fac' :: Int -> Int
 fac' 0 = 1
-fac' n = n * fac' (n-1)
+fac' n | n < 0     = 0  --Exercise 1
+       | otherwise = n * fac' (n-1)
 
 (*) :: (Eq a, Num a) => a -> a -> a
 m * 0 = 0
