@@ -61,7 +61,7 @@ halve xs = splitAt (length xs `div` 2) xs
 
 --Exercise 8
 msort :: Ord a => [a] -> [a]
-msort [] = []
+msort []  = []
 msort [x] = [x]
-msort xs = merge (msort xs') (msort ys)
-           where (xs', ys) = halve xs
+msort xs  = merge (msort xs') (msort ys)
+              where (xs', ys) = halve xs

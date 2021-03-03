@@ -68,11 +68,11 @@ spec = do
 
 
   describe "Exercise 7: merge" $ do
-    it "returns a sorted list when given two sorted list" $
+    it "returns a sorted list when given two sorted lists" $
       merge [2,5,6] [1,3,4] `shouldMatchList` [1,2,3,4,5,6]
 
   describe "Exercise 8: msort" $ do
     it "returns a sorted list when givn an unsorted list" $
       do
           msort [2,5,6,1,3,4] `shouldMatchList` [1,2,3,4,5,6]
-          msort [7, 2,5,6,1,3,4] `shouldMatchList` [1,2,3,4,5,6, 7]
+          msort [7,2,5,6,1,3,4] `shouldMatchList` [1,2,3,4,5,6,7]
