@@ -32,8 +32,8 @@ folde f g h (Mul e1 e2) = h (folde f g h e1) (folde f g h e2)
 
 --Exercise 6
 eval' :: Expr -> Int
-eval' e = folde (\x -> x) (\x y -> x + y) (\x y -> x * y) e
+eval' = folde id (+) (*)
 
 size :: Expr -> Int
-size = folde (\_ -> 1) (\x y -> x + y) (\x y -> x + y)
+size = folde (const 1) (+) (+)
 
