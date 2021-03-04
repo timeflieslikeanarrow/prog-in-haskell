@@ -41,7 +41,7 @@ curry f = \x -> (\y -> f (x, y))
 uncurry f = \(x, y) -> f x y
 
 --Exercise 6
-map' f = unfold (== []) (f . head) tail 
+map' f = unfold null (f . head) tail 
 
 iterate' f = unfold (const False) id f
 
