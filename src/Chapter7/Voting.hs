@@ -2,14 +2,10 @@ module Chapter7.Voting where
 
 import Data.List (sort)
 
-import Chapter7.Base (count)
+import Chapter7.Base (count, rmdups)
 
 --first past the post
 --count moved to Base
-
-rmdups :: Eq a => [a] -> [a]
-rmdups []     = []
-rmdups (x:xs) = x : filter (/= x) (rmdups xs)
 
 result :: Ord a => [a] -> [(Int, a)]
 result vs = sort [( count v vs, v) | v <- rmdups vs]

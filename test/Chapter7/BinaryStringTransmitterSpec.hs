@@ -3,6 +3,7 @@ module Chapter7.BinaryStringTransmitterSpec where
 import Test.Hspec
 import Test.QuickCheck
 
+import Chapter7.Base
 import Chapter7.BinaryStringTransmitter
 
 spec :: Spec
