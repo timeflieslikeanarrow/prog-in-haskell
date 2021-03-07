@@ -166,3 +166,7 @@ comment :: Parser ()
 comment = do string "--"
              many (sat (/= '\n'))
              return ()
+
+--DelftX FP101x Functional Parser - Part 2
+failure :: Parser a 
+failure = P (\inp -> [])

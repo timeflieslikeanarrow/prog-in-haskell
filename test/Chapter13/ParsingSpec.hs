@@ -91,8 +91,13 @@ spec = do
     it "2*3 - 4" $
       eval "2*3 - 4" `shouldBe` 2
 
+    --it "2*3 - 4 - 2" $
+    --  eval "2*3 - 4 - 2" `shouldBe` 0
+
     it "2*(3-4)" $
       eval "2*(3-4)" `shouldBe` (-2)
 
     it "(2*3) / 4" $
       eval "(2*3) / 4" `shouldBe` 1
+
+      
