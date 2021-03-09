@@ -2,7 +2,7 @@ module Chapter15.Exercise where
 
 --Exercise 4
 fibs :: [Integer]
-fibs = [0, 1] ++ [ x + y | (x, y) <- zip fibs (tail fibs)]
+fibs = 0 : 1 : [ x + y | (x, y) <- zip fibs (tail fibs)]
 
 --Exercise 6
 sqroots :: Double -> [Double]
